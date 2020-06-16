@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>ActionSheets</title>
+
+<actionsheet> 
+
+<action type="text/cas" codetype="text/javascript"> 
+.collapsible { 
+	onClick: "changeVisibility(event)"; 
+} 
+</action> 
+ 
+<script type="text/javascript"> 
+function changeVisibility(event) 
+{ 
+  var list = event.target.nextSibling; 
+  var style = list.style; 
+  	if (style.display == "none") 
+    	style.display = "block"; 
+  	else 
+    	style.display = "none"; 
+} 
+</script> 
+
+</actionsheet> 
+
+</head>
+
+<body>
+
+<ul> 
+  <li class="collapsible"> Sports </li>  
+  <ul> 
+    <li> Basketball </li> 
+    <li> Volleyball </li> 
+    <li> Baseball </li> 
+  </ul>  
+  <li class="collapsible"> Movie Genres </li> 
+  <ul>  
+    <li> Action </li> 
+    <li> Comedy </li> 
+    <li> Drama </li> 
+  </ul> 
+</ul> 
+
+</body>
+</html>

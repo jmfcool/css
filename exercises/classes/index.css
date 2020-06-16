@@ -1,0 +1,9 @@
+
+/* selects child class-b */
+.class-a .class-b {}
+
+/* selects if both siblings exist */
+.class-a.class-b {}
+
+/* selects both classes */
+.class-a, .class-b {}

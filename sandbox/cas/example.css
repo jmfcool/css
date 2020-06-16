@@ -1,0 +1,12 @@
+a *href {
+	onMouseOver: "this.style.fontColor = 'red'";
+	onMouseOut: "this.style.fontColor = 'blue'";
+}
+
+.toolTip {
+	onMouseOver: "showTip(event)";
+}
+
+#cardInfo {
+	onChange: "validate(this.value)";
+}

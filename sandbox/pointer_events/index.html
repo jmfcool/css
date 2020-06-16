@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>CSS pointer events</title>
+		<style>
+			.container 
+			{
+				position: relative;
+				width: 370px;
+			font: 15px Verdana, sans-serif;
+			margin: 10px auto;
+			}
+			.overlay 
+			{
+				position: absolute;
+				right: 0px;
+				top: 0;
+				width: 40px;
+				height: 40px;
+				background: rgba(0, 0, 0, 0.5);
+			}
+			.pointer-events-none 
+			{
+				pointer-events: none;
+			}
+			
+		</style>
+		<script>
+				
+			window.onload = function () 
+			{
+				document.getElementById("enable-disable-pointer-events").onclick = function () 
+				{
+					document.getElementById("overlay").className = "overlay " + ((this.checked)? "pointer-events-none" : "");
+				};
+			};
+	
+		</script>
+	</head>
+	<body>
+		<div class="container">
+			<a href="http://twitter.com">Twitter</a>, 
+			<a href="http://twitter.com">Twitter</a>, 
+			<a href="http://twitter.com">Twitter</a>, 
+			<a href="http://twitter.com">Twitter</a>, 
+			<a href="http://twitter.com">Twitter</a>, 
+			<a href="http://twitter.com">Twitter</a>, 
+			<a href="http://twitter.com">Twitter</a>, 
+			<a href="http://twitter.com">Twitter</a>, 
+			<a href="http://twitter.com">Twitter</a>, 
+			<a href="http://twitter.com">Twitter</a>, 
+			<a href="http://twitter.com">Twitter</a>, 
+			<a href="http://twitter.com">Twitter</a>, 
+			<a href="http://twitter.com">Twitter</a>, 
+			<a href="http://twitter.com">Twitter</a>,
+			<div id="overlay" class="overlay"></div>
+			<p>
+				<input id="enable-disable-pointer-events" type="checkbox">
+				<label for="enable-disable-pointer-events">Disable pointer events for grey box</label>
+			</p>
+		</div>
+<style type="text/css">
+	#facebook_like_button_holder 
+	{
+		position:relative;
+		width:90px;
+		height: 20px;
+		color:#fff;
+		background:black;	
+	}
+	
+	#facebook_like_button_holder iframe 
+	{
+		position:absolute;
+		top: 0px;
+		width: 90px !important;
+	}
+	
+	#fake_facebook_button 
+	{
+		pointer-events: none;
+		position:absolute;
+		width: 90px;
+		height: 20px;
+		left:0;
+		top:0;
+	
+	}
+
+</style>
+<div id="facebook_like_button_holder">
+	<iframe src="http://www.facebook.com/plugins/like.php?href=&amp;layout=button_count&amp;show_faces=true&amp;width=600&amp;action=recommend&amp;font&amp;colorscheme=light&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:600px; height:21px;" allowTransparency="true"></iframe>
+	<div id="fake_facebook_button"></div>
+</div>
+
+	</body>
+</html>

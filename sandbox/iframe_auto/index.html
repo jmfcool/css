@@ -1,0 +1,83 @@
+<html>
+<head>	
+
+<title>iFrame Auto Size and Conditional Commenting</title>
+
+<style type="text/css">
+
+body {
+	width: 100%;
+	height: 100%;
+	border-collapse: collapse;
+	margin: 0px;
+	padding: 0px;
+	overflow: hidden;
+}
+
+#box {
+	width: 100%;
+	height: 100%;
+	border-collapse: collapse;
+	margin: 0px;
+	padding: 0px;
+	top: 0px;
+	left: 0px;
+	position: absolute;
+	text-align: center;
+	vertical-align: middle;
+}
+
+#contentContainer {
+	width: 100%;
+	height: 100%;
+	border-collapse: collapse;
+	margin: auto;
+	padding: 0px;
+	background-color: #ffffff;
+	top: 0px;
+	left: 0px;
+	position: absolute;
+	z-index: 2;
+	text-align: center;
+	vertical-align: middle;
+}
+
+#contentContainer iframe {
+	width: 100%;
+	height: 100%;
+	margin: 0px;
+	padding: 0px;
+	border-collapse: collapse;
+	border: 0px;
+	display: block;
+}
+
+</style>
+
+<!--[if IE 6]>
+
+<style type="text/css">
+
+#contentContainer iframe {
+	width: 100%;
+	height: 105%;
+	margin: 0px 0px -180px 0px;
+	padding: 0px;
+	border-collapse: collapse;
+	border: 0px;
+	display: block;
+}
+
+</style>
+
+<![endif]-->
+
+</head>
+<body rightmargin="10">
+<div id="box">
+	<div id="contentContainer">
+		<iframe src="http://www.myspace.com" frameborder="0"></iframe>
+	</div>
+</div>
+</body>
+</html>
